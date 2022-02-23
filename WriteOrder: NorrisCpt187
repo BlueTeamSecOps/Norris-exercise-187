@@ -1,7 +1,7 @@
 /**
 AUTHOR:E.J. Norris
 COURSE: CPT 187
-PURPOSE: This is used to hold all the item, prize and discount names, as well as taxes, discount information and number of products you order for your purchase. 
+PURPOSE: This program is used to label the files to be opened then written to.
 CREATE DATE: 2-22-2022
  */
  
