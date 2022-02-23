@@ -1,0 +1,78 @@
+package edu.cpt187.norris.exercise7;
+
+import java.io.PrintWriter;//imports print writer
+import java.io.FileWriter;// imports file writer
+import java.io.IOException;// imports java IOExecption
+
+public class WriteOrder //class name
+{//class start
+
+	private boolean fileFoundFlag = false;// declares and inits boolean to default value of false
+	private String masterFileName = "";//declares and inits default string value to masterFileName
+	private int recordCount = 0;// declares and inits recordCount to default value of 0
+	 
+	
+	
+	//non-default constructor
+	WriteOrder(String borrowedFileName)//constructor Name
+	{//constructor start
+		
+		masterFileName = borrowedFileName; // assigns attribute masterFileNmae to borrowedFile Name
+	//constructor end
+	}
+	
+	
+	//setters
+	public void setWriteOrder(int borrowedItemID, String borrowedItemName, double borrowedItemPrice, int borrowedQuantity, double borrowedOrderCost)//overloaded setter Name
+	{//Setter Start
+		
+		try
+		{//try Start
+			
+			PrintWriter filePW = new PrintWriter(new FileWriter(masterFileName, true));// if file is found and opend execute remaining try code
+			
+			filePW.printf("%d\t%s\t%.2f\t%d\t%.f%n", borrowedItemID, borrowedItemName, borrowedItemPrice, borrowedQuantity, borrowedOrderCost); //writes borrowed Values to file
+			
+			recordCount++;//incrementor
+			
+			fileFoundFlag = true;//sets found flag to true
+			
+			filePW.close();//closes Print Writer
+			
+		//try end	
+		}
+		catch(IOException ex)//catch
+		{//catch Start
+			
+			fileFoundFlag = false;//sets found flag to false
+			
+		//catch end	
+		}
+		
+	//Setter end	
+	}
+	
+	//getters
+	public boolean getFileFoundFlag()//getter Name
+	{//getter Start
+		
+		return fileFoundFlag;// returns fileFoundFlag behaviour 
+		//getter end 	
+	}
+	
+	public String getFileName()//getter Name
+	{//getter Start
+		
+		return masterFileName;//returns fileName behaviour 
+		//getter end 	
+	}
+	
+	public int getRecordCount()//getter Name
+	{//getter Start
+		
+		return recordCount;// returns recordCount behaviour
+		//getter end 	
+	}
+	
+//class end	
+}
