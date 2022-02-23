@@ -1,3 +1,10 @@
+/**
+AUTHOR:E.J. Norris
+COURSE: CPT 187
+PURPOSE: This is used to hold all the item, prize and discount names, as well as taxes, discount information and number of products you order for your purchase. 
+CREATE DATE: 2-22-2022
+ */
+ 
 package edu.cpt187.norris.exercise7;
 
 
