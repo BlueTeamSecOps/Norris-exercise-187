@@ -1,3 +1,10 @@
+/**
+AUTHOR:E.J. Norris
+COURSE: CPT 187
+PURPOSE: This is where all the usernames and passwords will be stored. The login information that a user creates goes into a file created and managed here. 
+CREATE DATE: 2-22-2022
+ */
+
 package edu.cpt187.norris.exercise7;
 
 import java.io.FileInputStream;// imports FileInputStream
